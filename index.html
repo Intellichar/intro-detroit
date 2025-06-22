@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>底特律：变人 - 介绍网站</title>
+	<!-- 引入 Tailwind -->
+	<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+	<!-- 引入字体和图标 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+	<!-- 引入自定义 CSS -->
+	<link rel="stylesheet" href="styles.css">
+	<style>
+	 /* 仅保留 Tailwind 配置，其他样式移至 CSS 文件 */
+		tailwind.config = {
+			theme: {
+				extend: {
+	              colors: { primary: "#3B82F6", secondary: "#10B981" },
+	              borderRadius: {
+	                button: "8px",
+	              },
+	            },
+	          }
+	        };
+	</style>
+  </head>
+  <body>
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800"
+    >
+      <div class="container mx-auto px-4 py-4">
+        <nav class="flex justify-between items-center">
+          <a href="#" class="text-2xl font-['Pacifico'] text-white">底特律：变人</a>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="nav-link active text-white hover:text-primary transition-colors"
+              >主页</a
+            >
+			<a
+			  href="#company"
+			  class="nav-link text-slate-300 hover:text-primary transition-colors"
+			  >公司介绍</a
+			>
+            <a
+              href="#characters"
+              class="nav-link text-slate-300 hover:text-primary transition-colors"
+              >角色图鉴</a
+            >
+            <a
+              href="#story"
+              class="nav-link text-slate-300 hover:text-primary transition-colors"
+              >剧情脉络</a
+            >
+            <a
+              href="#media"
+              class="nav-link text-slate-300 hover:text-primary transition-colors"
+              >视听盛宴</a
+            >
+            
+          </div>
+          <button
+            class="md:hidden w-10 h-10 flex items-center justify-center text-white"
+          >
+            <i class="ri-menu-line ri-lg"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div
+      class="mobile-menu hidden fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-md"
+    >
+      <div class="container mx-auto px-4 py-20">
+        <div class="flex flex-col space-y-6 items-center">
+          <a
+            href="#home"
+            class="text-xl text-white hover:text-primary transition-colors"
+            >主页</a
+          >
+          <a
+            href="#characters"
+            class="text-xl text-slate-300 hover:text-primary transition-colors"
+            >角色图鉴</a
+          >
+          <a
+            href="#story"
+            class="text-xl text-slate-300 hover:text-primary transition-colors"
+            >剧情脉络</a
+          >
+          <a
+            href="#media"
+            class="text-xl text-slate-300 hover:text-primary transition-colors"
+            >视听盛宴</a
+          >
+          
+        </div>
+      </div>
+      <button
+        class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center text-white"
+      >
+        <i class="ri-close-line ri-lg"></i>
+      </button>
+    </div>
+
+    <main>
+      <!-- 主页板块 -->
+      <section
+        id="home"
+        class="hero-section min-h-screen pt-24 pb-16 flex items-center relative"
+      >
+        <div class="container mx-auto px-4 relative z-10">
+          <div class="flex flex-col items-center mb-16">
+            <div class="logo-container mb-8">
+              <div
+                class="logo-3d text-5xl md:text-7xl font-bold text-white text-center"
+                id="game-logo"
+              >
+                底特律：变人
+              </div>
+            </div>
+            <div
+              class="particles-container absolute inset-0 pointer-events-none"
+              id="particles-container"
+            ></div>
+          </div>
+
+          <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">
+              探索人与仿生人的边界
+            </h2>
+            <p class="text-lg md:text-xl text-slate-300 mb-6">
+              《底特律：变人》是一款由 Quantic Dream
+              开发的互动式冒险游戏，设定在 2038
+              年的底特律，讲述了一个仿生人开始觉醒并争取自由的故事。
+            </p>
+            <p class="text-lg md:text-xl text-slate-300 mb-8">
+              游戏通过三位主角的视角展开，玩家的每一个选择都将影响故事的走向，创造出独特的游戏体验。你的决定将决定仿生人与人类的命运。
+            </p>
+           <!-- 新增按钮区域 -->
+                 <div class="flex flex-col sm:flex-row justify-center gap-4 mt-12">
+                   <!-- 立即购买按钮 -->
+                   <a 
+                     href="https://store.steampowered.com/app/1222140/_/" 
+                     target="_blank" 
+                     class="px-8 py-3 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2 w-full sm:w-auto"
+                   >
+                     <i class="ri-shopping-cart-line"></i>
+                     <span>立即购买</span>
+                   </a>
+                   
+                   <!-- 观看预告片按钮 -->
+                   <a 
+                       href="#audio-visual" 
+                       class="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-lg transition-all transform hover:scale-105 hover:shadow-lg w-full sm:w-auto flex items-center justify-center gap-2"
+                     >
+                     <i class="ri-play-circle-line"></i>
+                     <span>观看预告片</span>
+                   </a>
+                 </div>
+      </section>
+	<!-- 公司介绍板块 -->
+<section id="company" class="py-20 bg-slate-800">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+        公司介绍
+      </h2>
+      <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+        了解《底特律：变人》的开发公司Quantic Dream。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="flex flex-col justify-between">
+        <h3 class="text-2xl font-bold mb-2 text-white">Quantic Dream</h3>
+        <p class="text-slate-300 text-left">
+        Quantic Dream 是一家极具影响力的游戏工作室，1997 年由大卫・凯奇在法国巴黎创立。</p>
+		<p class="text-slate-300 text-left">自成立以来，它便凭借独特的创意和先进的技术，在游戏行业占据了重要地位。
+        工作室首创 “交互式剧情” 概念，旗下游戏允许玩家通过多元选择改变故事走向、探索不同结局。这种创新叙事方式，让玩家不再只是被动接受剧情，而是深度参与其中，极大提升了游戏的沉浸感与重玩性。</p>
+		<p class="text-slate-300 text-left">2005 年，工作室推出首个 “互动电影式” 游戏，开启了游戏叙事新方向。之后，与索尼互动娱乐合作推出《暴雨》《超凡双生》和《底特律：化身为人》三款爆款游戏，斩获超 250 项全球奖项，推动了游戏叙事方式的发展。</p>
+		</p>
+      </div>
+      <div class="relative">
+        <img
+          src="网页图片/Quantic-Dream工作室.jpg"
+          alt="Quantic Dream"
+          class="w-full h-full object-cover object-top rounded-lg"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+      <!-- 角色图鉴板块 -->
+      <section id="characters" class="py-20 bg-slate-900">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+              角色图鉴
+            </h2>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+              探索《底特律：变人》中的主要角色，了解他们的背景故事和在游戏中的重要角色。
+            </p>
+          </div>
+          
+          <!-- 主要人物卡片 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 康纳 -->
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front bg-slate-800 flex flex-col">
+                  <div class="h-3/4 overflow-hidden">
+                    <img
+                      src="网页图片/康纳.jpg"
+                      alt="康纳"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div
+                    class="p-6 flex flex-col items-center justify-center flex-grow"
+                  >
+                    <h3 class="text-2xl font-bold mb-2 text-white">康纳</h3>
+                    <p class="text-slate-300 text-center">RK800 型警用仿生人</p>
+                    <button
+                      class="mt-4 text-primary hover:text-blue-400 flex items-center gap-2 transition-colors"
+                    >
+                      <span>了解更多</span>
+                      <i class="ri-arrow-right-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-back bg-slate-800 flex flex-col">
+                  <div class="h-1/2 overflow-hidden">
+                    <img
+                      src="网页图片/康纳展示.jpg"
+                      alt="康纳调查现场"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-6 overflow-y-auto flex-grow">
+                    <h3 class="text-xl font-bold mb-3 text-white">
+                      康纳 (RK800)
+                    </h3>
+                    <p class="text-slate-300 mb-4">
+                      康纳是模控生命公司设计的最先进的原型机，被指派协助底特律警方调查异常仿生人案件。他拥有先进的分析能力和谈判技巧，能够重建犯罪现场并快速处理信息。
+                    </p>
+                    <p class="text-slate-300">
+                      随着故事发展，康纳可能会开始质疑自己的使命，玩家的选择将决定他是保持机器的忠诚还是觉醒成为异常仿生人，加入马库斯的革命。
+                    </p>
+                    <button
+                      class="mt-4 text-primary hover:text-blue-400 flex items-center gap-2 transition-colors"
+                    >
+                      <i class="ri-arrow-left-line"></i>
+                      <span>返回</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- 马库斯 -->
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front bg-slate-800 flex flex-col">
+                  <div class="h-3/4 overflow-hidden">
+                    <img
+                      src="网页图片/马库斯.jpg"
+                      alt="马库斯"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div
+                    class="p-6 flex flex-col items-center justify-center flex-grow"
+                  >
+                    <h3 class="text-2xl font-bold mb-2 text-white">马库斯</h3>
+                    <p class="text-slate-300 text-center">
+                      RK200 型仿生人革命领袖
+                    </p>
+                    <button
+                      class="mt-4 text-primary hover:text-blue-400 flex items-center gap-2 transition-colors"
+                    >
+                      <span>了解更多</span>
+                      <i class="ri-arrow-right-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-back bg-slate-800 flex flex-col">
+                  <div class="h-1/2 overflow-hidden">
+                    <img
+                      src="网页图片/马库斯展示.jpg"
+                      alt="马库斯领导抗议"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-6 overflow-y-auto flex-grow">
+                    <h3 class="text-xl font-bold mb-3 text-white">
+                      马库斯 (RK200)
+                    </h3>
+                    <p class="text-slate-300 mb-4">
+                      马库斯原本是著名画家卡尔·曼弗雷德的照护型仿生人，在一系列事件后觉醒并加入了耶利哥，一个异常仿生人的避难所。凭借其独特的领导能力，他很快成为仿生人革命的领袖。
+                    </p>
+                    <p class="text-slate-300">
+                      玩家可以选择马库斯采取和平或暴力的方式来争取仿生人的权利，这些选择将深刻影响整个故事的走向和结局。
+                    </p>
+                    <button
+                      class="mt-4 text-primary hover:text-blue-400 flex items-center gap-2 transition-colors"
+                    >
+                      <i class="ri-arrow-left-line"></i>
+                      <span>返回</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- 卡拉 -->
+            <div class="card">
+              <div class="card-inner">
+                <div class="card-front bg-slate-800 flex flex-col">
+                  <div class="h-3/4 overflow-hidden">
+                    <img
+                      src='网页图片/卡拉.jpg'
+                      alt="卡拉"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div
+                    class="p-6 flex flex-col items-center justify-center flex-grow"
+                  >
+                    <h3 class="text-2xl font-bold mb-2 text-white">卡拉</h3>
+                    <p class="text-slate-300 text-center">AX400 型家政仿生人</p>
+                    <button
+                      class="mt-4 text-primary hover:text-blue-400 flex items-center gap-2 transition-colors"
+                    >
+                      <span>了解更多</span>
+                      <i class="ri-arrow-right-line"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="card-back bg-slate-800 flex flex-col">
+                  <div class="h-1/2 overflow-hidden">
+                    <img
+                      src='网页图片/卡拉展示.jpg'
+                      alt="卡拉保护爱丽丝"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-6 overflow-y-auto flex-grow">
+                    <h3 class="text-xl font-bold mb-3 text-white">
+                      卡拉 (AX400)
+                    </h3>
+                    <p class="text-slate-300 mb-4">
+                      卡拉是一个家政仿生人，被设计用来照顾家庭。在目睹女主人虐待自己的女儿爱丽丝后，卡拉觉醒并决定保护这个小女孩，带领她逃离充满危险的人类世界。
+                    </p>
+                    <p class="text-slate-300">
+                      卡拉的故事线探讨了母性、牺牲和生存的主题，玩家的选择将决定她和爱丽丝能否在这个对仿生人充满敌意的世界中找到安全的避难所。
+                    </p>
+                    <button
+                      class="mt-4 text-primary hover:text-blue-400 flex items-center gap-2 transition-colors"
+                    >
+                      <i class="ri-arrow-left-line"></i>
+                      <span>返回</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+		  <!-- 关联角色折叠面板 -->
+		  <div class="mt-16 space-y-8" id="characters-related">
+		    <!-- 康纳关联角色 -->
+		    <div class="bg-slate-800 rounded-xl overflow-hidden" data-character="connor">
+		      <div class="p-6 cursor-pointer related-characters-toggle border-b border-slate-700">
+		        <div class="flex items-center justify-between">
+		          <h3 class="text-xl font-bold text-white flex items-center gap-3">
+		            <i class="ri-user-line text-primary"></i>
+		            康纳的关联角色
+		          </h3>
+		          <button class="toggle-button text-primary hover:text-blue-400 transition-colors flex items-center gap-2">
+		            <span>展开</span>
+		            <i class="arrow-icon ri-arrow-down-s-line"></i>
+		          </button>
+		        </div>
+		      </div>
+		      <div class="related-characters-content hidden p-6 border-t border-slate-700">
+		        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+		          <!-- 关联角色1 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/汉克1.png' alt="汉克" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">汉克·安德森</h4>
+		              <p class="text-sm text-slate-300">底特律警局副队长</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色2 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/阿曼达1.png' alt="阿曼妲" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">阿曼妲</h4>
+		              <p class="text-sm text-slate-300">模控生命公司的代表</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色3 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/丹尼尔1.png' alt="丹尼尔" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">丹尼尔</h4>
+		              <p class="text-sm text-slate-300">异常仿生人</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色4 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/卡姆斯基1.png' alt="伊利亚·卡姆斯基" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">伊利亚·卡姆斯基</h4>
+		              <p class="text-sm text-slate-300">模控生命公司的创始人</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色5 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/盖文1.png' alt="盖文・里德" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">盖文・里德</h4>
+		              <p class="text-sm text-slate-300">底特律警局警探</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色6 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/佩金斯1.png' alt="佩金斯" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">佩金斯</h4>
+		              <p class="text-sm text-slate-300">FBI特务</p>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		    
+		    <!-- 马库斯关联角色 -->
+		    <div class="bg-slate-800 rounded-xl overflow-hidden mt-8" data-character="marcus">
+		      <div class="p-6 cursor-pointer related-characters-toggle border-b border-slate-700">
+		        <div class="flex items-center justify-between">
+		          <h3 class="text-xl font-bold text-white flex items-center gap-3">
+		            <i class="ri-user-line text-primary"></i>
+		            马库斯的关联角色
+		          </h3>
+		          <button class="toggle-button text-primary hover:text-blue-400 transition-colors flex items-center gap-2">
+		            <span>展开</span>
+		            <i class="arrow-icon ri-arrow-down-s-line"></i>
+		          </button>
+		        </div>
+		      </div>
+		      <div class="related-characters-content hidden p-6 border-t border-slate-700">
+		        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+		          <!-- 关联角色1 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/卡尔1.png' alt="卡尔" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">卡尔·曼弗雷德</h4>
+		              <p class="text-sm text-slate-300">著名画家</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色2 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/里奥1.png' alt="里奥·曼弗雷德" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">里奥·曼弗雷德</h4>
+		              <p class="text-sm text-slate-300">卡尔之子</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色3 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/诺斯1.png' alt="诺斯" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">诺斯</h4>
+		              <p class="text-sm text-slate-300">BL100型仿生人</p>
+					  <p class="text-sm text-slate-300">耶利哥核心成员</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色4 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/乔许1.png' alt="乔许" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">乔许</h4>
+		              <p class="text-sm text-slate-300">AX400型仿生人</p>
+					  <p class="text-sm text-slate-300">耶利哥核心成员</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色5 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/赛门1.png' alt="赛门" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">赛门</h4>
+		              <p class="text-sm text-slate-300">PL600型仿生人</p>
+					  <p class="text-sm text-slate-300">耶利哥核心成员</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色6 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/约翰1.png' alt="约翰" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">约翰</h4>
+		              <p class="text-sm text-slate-300">GJ500型仿生人</p>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		    
+		    <!-- 卡拉关联角色 -->
+		    <div class="bg-slate-800 rounded-xl overflow-hidden mt-8" data-character="kara">
+		      <div class="p-6 cursor-pointer related-characters-toggle border-b border-slate-700">
+		        <div class="flex items-center justify-between">
+		          <h3 class="text-xl font-bold text-white flex items-center gap-3">
+		            <i class="ri-user-line text-primary"></i>
+		            卡拉的关联角色
+		          </h3>
+		          <button class="toggle-button text-primary hover:text-blue-400 transition-colors flex items-center gap-2">
+		            <span>展开</span>
+		            <i class="arrow-icon ri-arrow-down-s-line"></i>
+		          </button>
+		        </div>
+		      </div>
+		      <div class="related-characters-content hidden p-6 border-t border-slate-700">
+		        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+		          <!-- 关联角色1 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/爱丽丝1.png' alt="爱丽丝" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">爱丽丝</h4>
+		              <p class="text-sm text-slate-300">卡拉保护的小女孩</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色2 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/陶德1.png' alt="陶德·威廉姆斯" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">陶德·威廉姆斯</h4>
+		              <p class="text-sm text-slate-300">爱丽丝的父亲</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色3 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/卢瑟1.png' alt="卢瑟" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">卢瑟</h4>
+		              <p class="text-sm text-slate-300">搬运工类型仿生人</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色4 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/兹拉科1.png' alt="兹拉科" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">兹拉科</h4>
+		              <p class="text-sm text-slate-300">人类</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色5 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/罗丝1.png' alt="罗丝" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">罗丝</h4>
+		              <p class="text-sm text-slate-300">收留仿生人的好心人类</p>
+		            </div>
+		          </div>
+		          
+		          <!-- 关联角色6 -->
+		          <div class="bg-slate-700 rounded-lg overflow-hidden transform hover:scale-105 transition-transform group">
+		            <div class="h-32 overflow-hidden">
+		              <img src='网页图片/亚当1.png' alt="亚当" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+		            </div>
+		            <div class="p-3 text-center">
+		              <h4 class="font-bold text-white">亚当</h4>
+		              <p class="text-sm text-slate-300">罗丝之子</p>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		<script src="script.js"></script>
+	  
+	  </section>
+
+      <!-- 剧情脉络板块 -->
+      <section id="story" class="py-20 bg-slate-800">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+              剧情脉络
+            </h2>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+              《底特律：变人》的故事分为多条交织的剧情线，每个角色的选择都会影响整个游戏世界的发展。滑动查看各个关键剧情节点。
+            </p>
+          </div>
+
+          <div class="mb-12">
+            <h3 class="text-2xl font-bold mb-6 text-white">康纳的故事线</h3>
+            <div class="timeline-container pb-4">
+              <div class="flex space-x-6">
+                <div
+                  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+                >
+                  <div class="h-48 overflow-hidden">
+                    <img
+                      src='故事线/剧情1.png'
+					  alt="人质"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4 flex-grow">
+                    <div class="flex items-center justify-between mb-2">
+                      <span
+                        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+                        >第一章</span
+                      >
+                      <span class="text-xs text-slate-400">2038.8.15</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-white">
+                      人质
+                    </h4>
+                    <p class="text-sm text-slate-300">
+                      康纳被派往一起人质劫持事件，一个家政仿生人丹尼尔因觉醒而挟持了一个小女孩。康纳必须解决这一危机，这是他作为谈判专家的首次亮相。
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+                >
+                  <div class="h-48 overflow-hidden">
+                    <img
+                      src='故事线/剧情5.jpg'
+					  alt="绝佳搭档 "
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4 flex-grow">
+                    <div class="flex items-center justify-between mb-2">
+                      <span
+                        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+                        >第五章</span
+                      >
+                      <span class="text-xs text-slate-400">2038.11.5</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-white">
+                      绝佳搭档 
+                    </h4>
+                    <p class="text-sm text-slate-300">
+                      康纳被指派与底特律警局的汉克·安德森中尉合作调查异常仿生人案件。汉克对仿生人抱有敌意，两人的关系从紧张开始。
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+                >
+                  <div class="h-48 overflow-hidden">
+                    <img
+                      src='故事线/剧情11.png'
+					  alt="等待汉克"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4 flex-grow">
+                    <div class="flex items-center justify-between mb-2">
+                      <span
+                        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+                        >第十一章</span
+                      >
+                      <span class="text-xs text-slate-400">2038.11.6</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-white">
+                      等待汉克
+                    </h4>
+                    <p class="text-sm text-slate-300">
+                     康纳在类似禅意花园的地方与阿曼妲交谈，之后前往底特律警察局寻找汉克。若之前讯问的仿生人未死亡，还可在牢房与其对话解锁新的流程图分支。
+					 </p>
+                  </div>
+                </div>
+
+                <div
+                  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+                >
+                  <div class="h-48 overflow-hidden">
+                    <img
+                      src='故事线/剧情14.png'
+					  alt="巢穴"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4 flex-grow">
+                    <div class="flex items-center justify-between mb-2">
+                      <span
+                        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+                        >第十四章</span
+                      >
+                      <span class="text-xs text-slate-400">2038.11.6</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-white">
+                      最终抉择
+                    </h4>
+                    <p class="text-sm text-slate-300">
+                      康纳在炸鸡店和汉克和好，康纳又接到附近出现异常仿生人的通报，两人去了案发地点，并对异常仿生人展开追捕，期间汉克会在顶楼被异常仿生人推倒，康纳会面临救汉克放弃追捕和继续追捕的抉择。
+					  </p>
+                  </div>
+                </div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情15.png'
+				      alt="选择时刻"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第十五章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.6</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      选择时刻
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      耶利哥避难所因为缺乏蓝血和生物组件，一大批仿生人面临停止运转的危机。在勘探过耶利哥，找到露西处理伤口并接受预言后，马库斯决定带领仿生人去找零件。
+				    </p>
+				  </div>
+				</div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情18.png'
+				      alt="备用零件"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第十八章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.6</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      备用零件
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      马库斯和诺斯、乔许、赛门四人抵达模控生命仓库，窃取了备用零件，遇到了约翰，并解放了一车仿生人。马库斯一人冒险偷到了一辆运输车的电子钥匙，众人离开仓库。
+				    </p>
+				  </div>
+				</div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情22.jpg'
+				      alt="史特拉福大厦"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第二十二章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.7</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      史特拉福大厦
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      马库斯和诺斯、乔许、赛门四人来到史特拉福大厦顶楼的广播室，马库斯褪下皮肤层向人类广播，要求仿生人平权。在撤离过程中会遇到一些意外，马库斯的选择会决定赛门的生死。
+				    </p>
+				  </div>
+				</div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情25.jpg'
+				      alt="国会大厦公园"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第二十五章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.9</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      国会大厦公园
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      马库斯和诺斯一队，和乔许分头前往模控生命线下售卖仿生人的门店，解放了一群待售卖的仿生人。
+				    </p>
+				  </div>
+				</div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情27.png'
+				      alt="自由示威游行"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第二十七章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.9</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      自由示威游行
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      马库斯领导仿生人进行和平示威，要求承认仿生人的权利。玩家可以选择和平或暴力的方式，这将影响公众对仿生人革命的看法。
+				    </p>
+				  </div>
+				</div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情29（康纳线）.png'
+				      alt="交叉路口"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第二十九章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.9</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      交叉路口
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      马库斯回到耶利哥，在这里会遇到带着爱丽丝的卡拉和乔装的康纳。最后FBI包围了这艘旧货轮，马库斯炸毁了耶利哥，拯救仿生人。
+				    </p>
+				  </div>
+				</div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情30.png'
+				      alt="灵魂之夜"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第三十章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.10</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      灵魂之夜
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      马库斯和一众仿生人躲在废弃教堂，在众仿生人的拥护下，马库斯做出决定。
+				    </p>
+				  </div>
+				</div>
+				
+			  </div>
+            </div>
+          </div>
+
+          <div class="mb-12">
+            <h3 class="text-2xl font-bold mb-6 text-white">马库斯的故事线</h3>
+            <div class="timeline-container pb-4">
+              <div class="flex space-x-6">
+                <div
+					class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+			  <div class="h-48 overflow-hidden">
+				<img
+				  src='故事线/剧情4.png'
+				  alt="画家"
+				  class="w-full h-full object-cover object-top"
+				/>
+			  </div>
+			  <div class="p-4 flex-grow">
+				<div class="flex items-center justify-between mb-2">
+				  <span
+					class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+					>第四章</span
+				  >
+				  <span class="text-xs text-slate-400">2038.11.5</span>
+				</div>
+				<h4 class="text-lg font-semibold mb-2 text-white">
+				  画家
+				</h4>
+				<p class="text-sm text-slate-300">
+				  马库斯是著名画家卡尔·曼弗雷德的照护型仿生人，两人有着深厚的情感联系。卡尔鼓励马库斯思考和创造，这为他日后的觉醒埋下伏笔。此时，卡尔的儿子里奥突然回家借钱，因卡尔拒绝，里奥咒骂着离去。
+				</p>
+				</div>
+				</div>
+	
+                <div
+                  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+                >
+                  <div class="h-48 overflow-hidden">
+                    <img
+                      src='故事线/剧情7.png'
+                      alt="破碎"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4 flex-grow">
+                    <div class="flex items-center justify-between mb-2">
+                      <span
+                        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+                        >第七章</span
+                      >
+                      <span class="text-xs text-slate-400">2038.11.5</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-white">
+                      破碎
+                    </h4>
+                    <p class="text-sm text-slate-300">
+                      马库斯与卡尔结束应酬回家，发现工作室灯没关，报警后进入工作室，发现里奥在偷画卖钱。马库斯与里奥产生冲突，马库斯觉醒。
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+                >
+                  <div class="h-48 overflow-hidden">
+                    <img
+                      src='故事线/剧情10.png'
+                      alt="来自死者"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4 flex-grow">
+                    <div class="flex items-center justify-between mb-2">
+                      <span
+                        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+                        >第十章</span
+                      >
+                      <span class="text-xs text-slate-400">2038.11.6</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-white">
+                      来自死者
+                    </h4>
+                    <p class="text-sm text-slate-300">
+                      马库斯再次醒来时，已被废弃丢在垃圾场，身体部分零件缺失。他从其他死亡仿生人处获取零件修复身体，最终爬出垃圾场并拔掉头上指示圈，预示着他彻底觉醒。
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+                >
+                  <div class="h-48 overflow-hidden">
+                    <img
+                      src='故事线/剧情13.jpg'
+                      alt="耶利哥"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4 flex-grow">
+                    <div class="flex items-center justify-between mb-2">
+                      <span
+                        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+                        >第十三章</span
+                      >
+                      <span class="text-xs text-slate-400">2038.11.6</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-white">
+                      耶利哥
+                    </h4>
+                    <p class="text-sm text-slate-300">
+                      经历一系列事件后，马库斯找到了异常仿生人的避难所耶利哥。在这里，他遇到了诺斯、乔许和赛门，并逐渐成为仿生人革命的领袖。
+                    </p>
+                  </div>
+                </div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情15.png'
+				      alt="选择时刻"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第十五章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.6</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      选择时刻
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      耶利哥避难所因为缺乏蓝血和生物组件，一大批仿生人面临停止运转的危机。在勘探过耶利哥，找到露西处理伤口并接受预言后，马库斯决定带领仿生人去找零件。
+				    </p>
+				  </div>
+				</div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情18.png'
+				      alt="备用零件"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第十八章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.6</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      备用零件
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      马库斯和诺斯、乔许、赛门四人抵达模控生命仓库，窃取了备用零件，遇到了约翰，并解放了一车仿生人。马库斯一人冒险偷到了一辆运输车的电子钥匙，众人离开仓库。
+				    </p>
+				  </div>
+				</div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情22.jpg'
+				      alt="史特拉福大厦"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第二十二章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.7</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      史特拉福大厦
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      马库斯和诺斯、乔许、赛门四人来到史特拉福大厦顶楼的广播室，马库斯褪下皮肤层向人类广播，要求仿生人平权。在撤离过程中会遇到一些意外，马库斯的选择会决定赛门的生死。
+				    </p>
+				  </div>
+				</div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情25.jpg'
+				      alt="国会大厦公园"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第二十五章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.9</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      国会大厦公园
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      马库斯和诺斯一队，和乔许分头前往模控生命线下售卖仿生人的门店，解放了一群待售卖的仿生人。
+				    </p>
+				  </div>
+				</div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情27.png'
+				      alt="自由示威游行"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第二十七章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.9</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      自由示威游行
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      马库斯领导仿生人进行和平示威，要求承认仿生人的权利。玩家可以选择和平或暴力的方式，这将影响公众对仿生人革命的看法。
+				    </p>
+				  </div>
+				</div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情29（马库斯线）.png'
+				      alt="交叉路口"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第二十九章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.9</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      交叉路口
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      马库斯回到耶利哥，在这里会遇到带着爱丽丝的卡拉和乔装的康纳。最后FBI包围了这艘旧货轮，马库斯炸毁了耶利哥，拯救仿生人。
+				    </p>
+				  </div>
+				</div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情31（马库斯线）.png'
+				      alt="为底特律而战"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第三十一章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.10</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      为底特律而战
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      马库斯领导仿生人进行最后的抗争，面对人类军队的围剿。玩家的选择将决定仿生人革命的成败，以及马库斯本人的命运。
+				    </p>
+				  </div>
+				</div>
+				
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-6 text-white">卡拉的故事线</h3>
+            <div class="timeline-container pb-4">
+              <div class="flex space-x-6">
+                <div
+                  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+                >
+                  <div class="h-48 overflow-hidden">
+                    <img
+                      src='故事线/剧情2.jpg'
+                      alt="色调"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4 flex-grow">
+                    <div class="flex items-center justify-between mb-2">
+                      <span
+                        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+                        >第二章</span
+                      >
+                      <span class="text-xs text-slate-400">2038.11.5</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-white">
+                      色调
+                    </h4>
+                    <p class="text-sm text-slate-300">
+                      陶德来到门店买回记忆清除后的卡拉。
+                    </p>
+                  </div>
+                </div>
+				
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情3.png'
+				      alt="新家"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第三章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.5</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      新家
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      卡拉继续在陶德家服务父女二人，家庭氛围和人物关系进一步刻画，卡拉在这个家中经历着各种事情，其内心的变化也在悄然发生。
+				    </p>
+				  </div>
+				</div>
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情6.png'
+				      alt="暴风雨之夜"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第六章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.5</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      暴风雨之夜
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      暴风雨夜晚，陶德因妻子跑路和被仿生人抢工作而气愤地打了女儿，女儿跑上楼。卡拉想帮忙却被命令不准动，此时她可选择破除禁制，上楼带爱丽丝离开陶德。
+				    </p>
+				  </div>
+				</div>
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情9.png'
+				      alt="逃亡"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第九章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.5</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      逃亡
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      卡拉和爱丽丝开始逃亡之旅，在逃亡过程中，她们面临各种困难和危险，需要想尽办法躲避追捕，寻找安全的藏身之处，展现出二人相互扶持的情感。
+				    </p>
+				  </div>
+				</div>
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情12.png'
+				      alt="逃跑"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第十二章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.6</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      逃跑
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      休息一晚过后，卡拉带着爱丽丝躲避康纳的追逐，最后翻越了马路，来到车站。
+				    </p>
+				  </div>
+				</div>
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情16.jpg'
+				      alt="兹拉科"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第十六章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.6</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      兹拉科
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      卡拉带着爱丽丝沿着园丁的指示来到了兹拉科的旧房子。卡拉被兹拉科带去删除记忆。最后卡拉带着爱丽丝在卢瑟的帮助下逃离了兹拉科的庄园。
+				    </p>
+				  </div>
+				</div>
+                <div
+                  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+                >
+                  <div class="h-48 overflow-hidden">
+                    <img
+                      src='故事线/剧情20.png'
+                      alt="海盗湾"
+                      class="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                  <div class="p-4 flex-grow">
+                    <div class="flex items-center justify-between mb-2">
+                      <span
+                        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+                        >第二十章</span
+                      >
+                      <span class="text-xs text-slate-400">2038.11.7</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-white">
+                      海盗湾
+                    </h4>
+                    <p class="text-sm text-slate-300">
+                      卢瑟开车带着卡拉和爱丽丝离开，雪天车子抛锚，三人来到海盗湾游乐园。三人在游乐园暂时落脚，遇到了一群被遗弃的废弃游乐园仿生人，它们带着爱丽丝去玩旋转木马。
+                    </p>
+                  </div>
+                </div>
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情24.png'
+				      alt="午夜列车"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第二十四章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.8</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      午夜列车
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      卡拉三人找到了罗丝，罗丝的儿子亚当并不同意接收再多的仿生人，与罗丝起了争执。罗丝出门看边境河。碰巧警官来检查，卡拉需要做出选择不被警官怀疑仿生人身份。
+				    </p>
+				  </div>
+				</div>
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情29（卡拉线）.png'
+				      alt="交叉路口"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第二十九章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.9</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      交叉路口
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      卡拉三人在罗丝的护送下去耶利哥找马库斯要证件，前往边境，即将去往加拿大。
+				    </p>
+				  </div>
+				</div>
+				<div
+				  class="timeline-item bg-slate-700 rounded-lg overflow-hidden flex flex-col"
+				>
+				  <div class="h-48 overflow-hidden">
+				    <img
+				      src='故事线/剧情31（卡拉线）.png'
+				      alt="为底特律而战"
+				      class="w-full h-full object-cover object-top"
+				    />
+				  </div>
+				  <div class="p-4 flex-grow">
+				    <div class="flex items-center justify-between mb-2">
+				      <span
+				        class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-2 py-1 rounded"
+				        >第三十一章</span
+				      >
+				      <span class="text-xs text-slate-400">2038.11.10</span>
+				    </div>
+				    <h4 class="text-lg font-semibold mb-2 text-white">
+				      为底特律而战
+				    </h4>
+				    <p class="text-sm text-slate-300">
+				      卡拉和爱丽丝最终到达加拿大边境，面临最后的障碍。玩家的选择将决定她们能否成功越过边境，开始新的生活。
+				    </p>
+				  </div>
+				</div>
+				
+				
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 视听盛宴板块 -->
+      <section id="audio-visual" class="py-20 bg-slate-1000">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white">视听盛宴</h2>
+          <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+            探索《底特律：变人》的视觉和音频内容，包括官方宣传片、游戏测评和精彩瞬间。
+          </p>
+        </div>
+      
+        <div class="max-w-5xl mx-auto mb-16">
+            <h3 class="text-2xl font-bold mb-6 text-white">官方宣传片</h3>
+            <div class="bg-slate-800 rounded-lg overflow-hidden shadow-xl">
+                <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto">
+                    <video controls class="w-full h-full object-cover rounded-lg">
+                        <source src="预告片/预告片.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                    </video>
+                </div>
+                <div class="p-6">
+                    <h4 class="text-xl font-bold mb-2 text-white">
+                        《底特律：变人》官方发布预告片
+                    </h4>
+                    <p class="text-slate-300 mb-4">
+                        Quantic Dream发布的《底特律：变人》官方预告片，展示了游戏的核心故事和三位主角的命运交织。
+                    </p>
+                    <div class="flex items-center text-sm text-slate-400">
+                        <span class="flex items-center mr-4">
+                            <i class="ri-time-line mr-1"></i>
+                            3:42
+                        </span>
+                        <span class="flex items-center">
+                            <i class="ri-calendar-line mr-1"></i>
+                            2018.02.23
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      
+        <div class="max-w-5xl mx-auto">
+          <h3 class="text-2xl font-bold mb-6 text-white">精选视频</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 新视频卡片1：谈判大师康纳 -->
+              <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg group relative cursor-pointer" onclick="window.location.href='https://www.bilibili.com/video/BV1TvymYhEcs'">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                  <iframe 
+                    src="https://player.bilibili.com/player.html?bvid=BV1TvymYhEcs" 
+                    scrolling="no" 
+                    border="0" 
+                    frameborder="no" 
+                    framespacing="0" 
+                    class="w-full h-full object-cover"
+                    allowfullscreen
+                  ></iframe>
+                  <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <i class="ri-play-circle-line text-5xl text-white"></i>
+                  </div>
+                </div>
+                <div class="p-4 bg-slate-800/80 backdrop-blur-sm">
+                  <h4 class="text-lg font-bold mb-2 text-white">
+                    《底特律:变人》 请叫我，谈判大师康纳!
+                  </h4>
+                  <p class="text-sm text-slate-300 mb-3 line-clamp-2">
+                    深入展示康纳作为警用仿生人的谈判技巧，通过关键场景解析其如何化解危机并影响剧情走向。
+                  </p>
+                  <div class="flex items-center text-xs text-slate-400">
+                    <span class="flex items-center mr-3">
+                      <i class="ri-time-line mr-1"></i>
+                      24:15
+                    </span>
+                    <span class="flex items-center">
+                      <i class="ri-user-line mr-1"></i>
+                      游戏实况频道
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 新视频卡片2：场景设计欣赏 -->
+              <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg group relative cursor-pointer" onclick="window.location.href='https://www.bilibili.com/video/BV1kZAze7EXB'">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                  <iframe 
+                    src="https://player.bilibili.com/player.html?bvid=BV1kZAze7EXB" 
+                    scrolling="no" 
+                    border="0" 
+                    frameborder="no" 
+                    framespacing="0" 
+                    class="w-full h-full object-cover"
+                    allowfullscreen
+                  ></iframe>
+                  <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <i class="ri-play-circle-line text-5xl text-white"></i>
+                  </div>
+                </div>
+                <div class="p-4 bg-slate-800/80 backdrop-blur-sm">
+                  <h4 class="text-lg font-bold mb-2 text-white">
+                    游戏设计审美艺术-底特律变人场景设计欣赏
+                  </h4>
+                  <p class="text-sm text-slate-300 mb-3 line-clamp-2">
+                    解析游戏中未来底特律的场景设计美学，从赛博朋克风格建筑到细节丰富的室内环境，感受视觉艺术魅力。
+                  </p>
+                  <div class="flex items-center text-xs text-slate-400">
+                    <span class="flex items-center mr-3">
+                      <i class="ri-time-line mr-1"></i>
+                      18:30
+                    </span>
+                    <span class="flex items-center">
+                      <i class="ri-user-line mr-1"></i>
+                      游戏美学频道
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 新视频卡片3：超然CG混剪 -->
+              <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg group relative cursor-pointer" onclick="window.location.href='https://www.bilibili.com/video/BV1kW411N7Qz'">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                  <iframe 
+                    src="https://player.bilibili.com/player.html?bvid=BV1kW411N7Qz" 
+                    scrolling="no" 
+                    border="0" 
+                    frameborder="no" 
+                    framespacing="0" 
+                    class="w-full h-full object-cover"
+                    allowfullscreen
+                  ></iframe>
+                  <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <i class="ri-play-circle-line text-5xl text-white"></i>
+                  </div>
+                </div>
+                <div class="p-4 bg-slate-800/80 backdrop-blur-sm">
+                  <h4 class="text-lg font-bold mb-2 text-white">
+                    【超然CG混剪】底特律：变人-This is our story
+                  </h4>
+                  <p class="text-sm text-slate-300 mb-3 line-clamp-2">
+                    精选游戏中震撼人心的CG片段，配合激昂配乐展现仿生人的觉醒与抗争，感受史诗级叙事魅力。
+                  </p>
+                  <div class="flex items-center text-xs text-slate-400">
+                    <span class="flex items-center mr-3">
+                      <i class="ri-time-line mr-1"></i>
+                      05:42
+                    </span>
+                    <span class="flex items-center">
+                      <i class="ri-user-line mr-1"></i>
+                      CG混剪工坊
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 新视频卡片1：卡拉台词向混剪 -->
+              <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg group relative cursor-pointer" onclick="window.location.href='https://www.bilibili.com/video/BV1AM4y1n7Dp'">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                  <iframe 
+                    src="https://player.bilibili.com/player.html?bvid=BV1AM4y1n7Dp" 
+                    scrolling="no" 
+                    border="0" 
+                    frameborder="no" 
+                    framespacing="0" 
+                    class="w-full h-full object-cover"
+                    allowfullscreen
+                  ></iframe>
+                  <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <i class="ri-play-circle-line text-5xl text-white"></i>
+                  </div>
+                </div>
+                <div class="p-4 bg-slate-800/80 backdrop-blur-sm">
+                  <h4 class="text-lg font-bold mb-2 text-white">
+                    【底特律变人/卡拉/台词向混剪】"忘掉自己是谁"
+                  </h4>
+                  <p class="text-sm text-slate-300 mb-3 line-clamp-2">
+                    聚焦卡拉角色的经典台词混剪，配合动人BGM展现仿生人对自我与生命意义的探寻。
+                  </p>
+                  <div class="flex items-center text-xs text-slate-400">
+                    <span class="flex items-center mr-3">
+                      <i class="ri-time-line mr-1"></i>
+                      04:32
+                    </span>
+                    <span class="flex items-center">
+                      <i class="ri-user-line mr-1"></i>
+                      Athony233
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 新视频卡片2：电影级追逐体验 -->
+              <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg group relative cursor-pointer" onclick="window.location.href='https://www.bilibili.com/video/BV1Hr4y1P7gU'">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                  <iframe 
+                    src="https://player.bilibili.com/player.html?bvid=BV1Hr4y1P7gU" 
+                    scrolling="no" 
+                    border="0" 
+                    frameborder="no" 
+                    framespacing="0" 
+                    class="w-full h-full object-cover"
+                    allowfullscreen
+                  ></iframe>
+                  <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <i class="ri-play-circle-line text-5xl text-white"></i>
+                  </div>
+                </div>
+                <div class="p-4 bg-slate-800/80 backdrop-blur-sm">
+                  <h4 class="text-lg font-bold mb-2 text-white">
+                    电影级追逐体验！【2K60帧最高画质】底特律变人
+                  </h4>
+                  <p class="text-sm text-slate-300 mb-3 line-clamp-2">
+                    以最高画质呈现游戏中的经典追逐场景，感受电影级视觉效果与紧张刺激的剧情张力。
+                  </p>
+                  <div class="flex items-center text-xs text-slate-400">
+                    <span class="flex items-center mr-3">
+                      <i class="ri-time-line mr-1"></i>
+                      12:45
+                    </span>
+                    <span class="flex items-center">
+                      <i class="ri-user-line mr-1"></i>
+                      不二之巅-跑酷
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- 新视频卡片3：克洛伊小姐姐采访 -->
+              <div class="bg-slate-800 rounded-lg overflow-hidden shadow-lg group relative cursor-pointer" onclick="window.location.href='https://www.bilibili.com/video/BV19s411L77Z'">
+                <div class="aspect-w-16 aspect-h-9 relative">
+                  <iframe 
+                    src="https://player.bilibili.com/player.html?bvid=BV19s411L77Z" 
+                    scrolling="no" 
+                    border="0" 
+                    frameborder="no" 
+                    framespacing="0" 
+                    class="w-full h-full object-cover"
+                    allowfullscreen
+                  ></iframe>
+                  <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <i class="ri-play-circle-line text-5xl text-white"></i>
+                  </div>
+                </div>
+                <div class="p-4 bg-slate-800/80 backdrop-blur-sm">
+                  <h4 class="text-lg font-bold mb-2 text-white">
+                    【底特律：变人】克洛伊小姐姐采访
+                  </h4>
+                  <p class="text-sm text-slate-300 mb-3 line-clamp-2">
+                    走进游戏中克洛伊的幕后世界，倾听演员分享角色塑造过程与动捕幕后故事。
+                  </p>
+                  <div class="flex items-center text-xs text-slate-400">
+                    <span class="flex items-center mr-3">
+                      <i class="ri-time-line mr-1"></i>
+                      08:27
+                    </span>
+                    <span class="flex items-center">
+                      <i class="ri-user-line mr-1"></i>
+                      游戏人Gamer
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    </main>
+
+     <footer class="footer">
+        
+		        <div
+		          class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center"
+		        >
+		          <p class="text-slate-400 text-sm mb-4 md:mb-0">
+		            © 2025 Quantic Dream. 保留所有权利。《底特律：变人》是 Quantic
+		            Dream 的注册商标。
+		          </p>
+		          <div class="flex space-x-4">
+		            <a
+		              href="#"
+		              class="text-slate-400 hover:text-primary text-sm transition-colors"
+		              >服务条款</a
+		            >
+		            <a
+		              href="#"
+		              class="text-slate-400 hover:text-primary text-sm transition-colors"
+		              >隐私政策</a
+		            >
+		            <a
+		              href="#"
+		              class="text-slate-400 hover:text-primary text-sm transition-colors"
+		              >Cookie 政策</a
+		            >
+		          </div>
+		        </div>
+		      </div>
+      </footer>
+
+    <script id="navigation-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        // 导航链接激活状态
+        const navLinks = document.querySelectorAll(".nav-link");
+        const sections = document.querySelectorAll("section");
+
+        function setActiveLink() {
+          let currentSection = "";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (window.scrollY >= sectionTop - 200) {
+              currentSection = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${currentSection}`) {
+              link.classList.add("active");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", setActiveLink);
+        setActiveLink();
+
+        // 移动端菜单
+        const menuButton = document.querySelector(".md\\:hidden");
+        const closeButton = document.querySelector(".mobile-menu button");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const mobileMenuLinks = document.querySelectorAll(".mobile-menu a");
+
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.remove("hidden");
+          document.body.style.overflow = "hidden";
+        });
+
+        closeButton.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+          document.body.style.overflow = "";
+        });
+
+        mobileMenuLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+            document.body.style.overflow = "";
+          });
+        });
+      });
+    </script>
+
+    <script id="particles-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("particles-container");
+        const logo = document.getElementById("game-logo");
+
+        function createParticle() {
+          if (!container) return;
+
+          const particle = document.createElement("div");
+          particle.classList.add("particle");
+
+          const size = Math.random() * 10 + 5;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+
+          const logoRect = logo.getBoundingClientRect();
+          const containerRect = container.getBoundingClientRect();
+
+          const startX =
+            Math.random() * logoRect.width + (logoRect.left - containerRect.left);
+          const startY =
+            Math.random() * logoRect.height + (logoRect.top - containerRect.top);
+
+          particle.style.left = `${startX}px`;
+          particle.style.top = `${startY}px`;
+
+          const angle = Math.random() * Math.PI * 2;
+          const distance = Math.random() * 150 + 50;
+          const tx = Math.cos(angle) * distance;
+          const ty = Math.sin(angle) * distance;
+
+          particle.style.setProperty("--tx", `${tx}px`);
+          particle.style.setProperty("--ty", `${ty}px`);
+
+          const duration = Math.random() * 2 + 2;
+          particle.style.animationDuration = `${duration}s`;
+
+          container.appendChild(particle);
+
+          setTimeout(() => {
+            particle.remove();
+          }, duration * 1000);
+        }
+
+        // 初始创建一些粒子
+        for (let i = 0; i < 20; i++) {
+          setTimeout(createParticle, Math.random() * 2000);
+        }
+
+        // 定期创建新粒子
+        setInterval(createParticle, 300);
+      });
+    </script>
+    <script id="card-flip-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach((card) => {
+          const frontButton = card.querySelector(".card-front button");
+          const backButton = card.querySelector(".card-back button");
+
+          frontButton.addEventListener("click", function () {
+            card.classList.add("flipped");
+          });
+
+          backButton.addEventListener("click", function () {
+            card.classList.remove("flipped");
+          });
+        });
+      });
+    </script>
+
+    
+  </body>
+</html>
